@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Portfolio - Axel Baudrillart</title>
+</head>
+<body>
+    <header>
+        <img src="/axbaudri.jpg" alt="">
+        <h1>Axel BAUDRILLART</h1>
+        <p>Étudiant à l'école 42</p>
+    </header>
+    <section id="projects">
+        <h2>Mes projets</h2>
+        <div class="project">
+            <div class="line">ft_printf : Une reproduction de la fonction affichant des variables dans une string.</div>
+            <div class="line">push_swap : Un programme pour trier des nombres en les déplaçant une par une.</div>
+            <div class="line">so_long : Un créateur de map 2D avec un point de départ, une sortie, des items et des murs.</div>
+            <div class="line">philosophers : Un suivi de routine de N philosophes. <a href="https://github.com/Axeltoutseul/Philosophers">Voir sur GitHub</a></div>
+            <div class="line">minishell : Une reproduction du terminal. <a href="https://github.com/Axeltoutseul/Minishell">Voir sur GitHub</a></div>
+            <div class="line">net_practice : Des cas pratiques de configuration de réseaux.</div>
+        </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+        <form id="contact-form">
+          <input type="text" placeholder="Nom" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Envoyer</button>
+          <p id="message"></p> <!-- zone d'affichage du message -->
+        </form>
+    </section>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
