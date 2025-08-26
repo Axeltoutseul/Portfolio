@@ -28,8 +28,7 @@ SECRET_KEY = 'django-insecure-6es%pbuvu1p$bg@f97eyj1mqhh#gkc_x#)stp28!y_0s-2z5%9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['axeltoutseul.pythonanywhere.com', '127.0.0.1']
 
 # Application definition
 
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'my_portfolio'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'page_personnelle.urls'
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'page_personnelle.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/Serge/Desktop/mon_site/page_personnelle/templates"],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,7 +124,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, STATIC_URL),
 ]
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
